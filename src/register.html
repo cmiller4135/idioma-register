@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up for SMS Notifications</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .container { max-width: 400px; margin: auto; }
+        label, input { display: block; width: 100%; margin-bottom: 10px; }
+        .checkbox-container { display: flex; align-items: center; }
+        .checkbox-container input { width: auto; margin-right: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up for SMS Alerts</h2>
+        <form id="sms-consent-form">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 123-4567">
+            
+            <div class="checkbox-container">
+                <input type="checkbox" id="sms-consent" name="sms-consent" required>
+                <label for="sms-consent">I agree to receive SMS messages from this service.</label>
+            </div>
+            
+            <p>By signing up, you agree to receive text messages from us. Message and data rates may apply. Reply STOP to unsubscribe.</p>
+            
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("sms-consent-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const phone = document.getElementById("phone").value;
+            const consent = document.getElementById("sms-consent").checked;
+            
+            if (!consent) {
+                alert("You must agree to receive SMS messages to continue.");
+                return;
+            }
+            
+            alert("Thank you for signing up! You will receive SMS updates.");
+        });
+    </script>
+</body>
+</html>
