@@ -117,7 +117,7 @@ export default function SignupForm() {
         />
       </div>
 
-      <div className="space-y-2">
+      {/* <div className="space-y-2">
         <Label htmlFor="category" className="text-custom-blue">Category (Optional)</Label>
         <Input
           id="category"
@@ -127,10 +127,10 @@ export default function SignupForm() {
           value={formData.category}
           onChange={handleInputChange}
         />
-      </div>
+      </div> */}
 
       <div className="space-y-4">
-        <div className="flex items-center space-x-2">
+        {/* <div className="flex items-center space-x-2">
           <Checkbox
             id="terms"
             checked={formData.termsAccepted}
@@ -144,7 +144,7 @@ export default function SignupForm() {
             </a>
             .
           </Label>
-        </div>
+        </div> */}
 
         <div className="flex items-center space-x-2">
           <Checkbox
