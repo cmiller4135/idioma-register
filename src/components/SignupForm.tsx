@@ -27,7 +27,7 @@ export default function SignupForm() {
       await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate API call
       toast({
         title: "Success!",
-        description: "Your account has been created successfully.",
+        description: "You successfully signed up.",
         duration: 5000,
       });
     } catch (error) {
@@ -164,7 +164,7 @@ export default function SignupForm() {
       <button
         type="submit"
         className="btn-primary w-full"
-        disabled={isLoading || !formData.termsAccepted || !formData.consentGiven}
+        disabled={isLoading || !formData.consentGiven}
       >
         {isLoading ? "Signing up..." : "Sign Up"}
       </button>
